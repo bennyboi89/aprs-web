@@ -1,0 +1,6 @@
+/etc/apache2/sites-available/aprs.conf
+/etc/init.d/polaric-webapp
+/etc/polaric-webapp/mapcache.xml
+/etc/polaric-webapp/mapconfig.js
+/etc/polaric-webapp/users
+/etc/polaric-webapp/webappconfig.php

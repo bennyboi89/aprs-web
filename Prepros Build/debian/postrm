@@ -1,0 +1,38 @@
+#!/bin/bash
+set -e
+
+case "$1" in
+    remove|purge)
+       if [ -d "/var/lib/polaric/mapcache" ]; then
+          rm -R /var/lib/polaric/mapcache
+       fi
+       
+       if [ "$1" == "purge" ] ; then
+          if [ -e "/etc/polaric-webapp/users" ]; then
+             rm /etc/polaric-webapp/users
+          fi
+          if [ -h "/var/www/aprs/img" ]; then
+             rm /var/www/aprs/img
+          fi
+          if [ -h "/var/www/aprs/theme" ]; then
+             rm /var/www/aprs/theme
+          fi          
+          if [ -d "/var/www/html" ]; then
+             if [ -h "/var/www/html/aprs" ]; then
+                rm /var/www/html/aprs
+             fi
+          fi
+       fi
+    ;;
+
+    upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)
+        # Nothing to do here
+    ;;
+
+    *)
+        echo "$0 called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+#DEBHELPER#
