@@ -9,7 +9,7 @@ a16576f1b6952c4408294bafd1b99af5  usr/share/doc/polaric-webapp/examples/usa-usgs
 7bf3aed87c41e61bf576dd759f534a19  usr/share/lintian/overrides/polaric-webapp
 da347cb76ea9dfa710861b54b3f94699  usr/share/man/man1/polaric-passwd.1.gz
 cd3d7f18c3c8a15a5b8996e10f805969  var/www/aprs/.htaccess
-991e682abc51a5b1b0b8600de4da86db  var/www/aprs/Aprs/compiled.js
+1e7318380d53ba5687df666ac1e94cf8  var/www/aprs/Aprs/compiled.js
 109231340ce3f20866790904aa020145  var/www/aprs/Aprs/configSupport.js
 87f40d2eae54e36566aea65bba19eb5f  var/www/aprs/Aprs/iframeApi.js
 c0cad58f958c967912d024bbd714323e  var/www/aprs/KaMap/excanvas.js

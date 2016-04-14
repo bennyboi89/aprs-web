@@ -20,10 +20,12 @@ ctxtMenu.addCallback('MAP', function(m)
   if (WXreport_enable)
     m.add(_('WX report (Norway)'), function() { setTimeout('popup_wxInfoPix('+m.x+', '+m.y+');',100); });
 
- m.add(_('Add Rescue mission'), function () { popup_addRescueMission(m.x, m.y);});
+ 
+  
 
   if (canUpdate())
     m.add(_('Add APRS object'), function () { popup_editObject(m.x, m.y);});
+    m.add(_('Add Rescue mission'), function () { popup_addRescueMission(m.x, m.y);});
   if (isAdmin())
     m.add(_('Set own position'), function () { popup_setOwnPos(m.x, m.y);});
 
@@ -44,11 +46,12 @@ ctxtMenu.addCallback('MAIN', function(m)
   m.d = toolbar;
   m.add(_('Search station/object'), function()  { setTimeout('popup_searchItems();',100);});
   m.add(_('Find map reference'), function() { setTimeout('popup_refSearch();',100); });
-  m.add(_('Add rescue mission'), function() { popup_addRescueMission(null, null); });
+  
   if (statkartName_enable)
     m.add(_('Find location name (Norway)'), function()  { setTimeout('popup_searchNames();',100);});
 
   if (canUpdate()) {
+    m.add(_('Add rescue mission'), function() { popup_addRescueMission(null, null); });
     m.add(_('Add object'), function() { popup_editObject(null, null); });
     m.add(_('Remove object'), function() { popup_deleteObject(null); });
   }
